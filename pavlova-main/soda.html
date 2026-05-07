@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sodas & Fizz</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: linear-gradient(to right,#032d28,#06453d);
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    min-height:100vh;
+    padding:40px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h1{
+    font-family:'Cinzel', serif;
+    font-size:55px;
+    color:#e8c07d;
+    letter-spacing:2px;
+}
+
+.title p{
+    font-size:18px;
+    color:#ddd;
+    margin-top:10px;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+    padding:25px;
+    transition:0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card h2{
+    font-family:'Cinzel', serif;
+    color:#f0c27b;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    font-size:17px;
+}
+
+.item:last-child{
+    border:none;
+}
+
+.price{
+    color:#ffd28c;
+    font-weight:bold;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:45px;
+    text-decoration:none;
+    color:#032d28;
+    background:#e8c07d;
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:white;
+}
+
+.footer{
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">
+        <h1>Sodas & Fizz</h1>
+        <p>Pop, Sip & Enjoy</p>
+    </div>
+
+    <div class="menu-grid">
+
+        <div class="card">
+            <h2>Classics</h2>
+
+            <div class="item">
+                <span>Coca-Cola</span>
+                <span class="price">30 EGP</span>
+            </div>
+
+            <div class="item">
+                <span>Pepsi</span>
+                <span class="price">30 EGP</span>
+            </div>
+
+            <div class="item">
+                <span>Sprite</span>
+                <span class="price">30 EGP</span>
+            </div>
+
+            <div class="item">
+                <span>7UP</span>
+                <span class="price">30 EGP</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Sparkling</h2>
+
+            <div class="item">
+                <span>Sparkling Lemonade</span>
+                <span class="price">55 EGP</span>
+            </div>
+
+            <div class="item">
+                <span>Sparkling Mango</span>
+                <span class="price">60 EGP</span>
+            </div>
+
+            <div class="item">
+                <span>Sparkling Berry</span>
+                <span class="price">60 EGP</span>
+            </div>
+
+            <div class="item">
+                <span>Sparkling Mint</span>
+                <span class="price">55 EGP</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Floats</h2>
+
+            <div class="item">
+                <span>Cola Float</span>
+                <span class="price">65 EGP</span>
+            </div>
+
+            <div class="item">
+                <span>Orange Float</span>
+                <span class="price">65 EGP</span>
+            </div>
+
+            <div class="item">
+                <span>Strawberry Float</span>
+                <span class="price">70 EGP</span>
+            </div>
+
+            <div class="item">
+                <span>Blue Raspberry Float</span>
+                <span class="price">70 EGP</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <a href="fullmenu.html" class="back-btn">Back To Menu</a>
+    </div>
+
+</div>
+
+</body>
+</html>

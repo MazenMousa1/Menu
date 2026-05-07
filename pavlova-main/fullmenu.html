@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+
+    <section id="menu-hero">
+        <a href="index.html" class="back-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back
+        </a>
+
+        <h1 class="menu-hero-title">
+            Everything We<br>
+            <em>Craft for You</em>
+        </h1>
+
+        <div class="menu-hero-eyebrow">Full Menu — Our Offerings</div>
+
+        <p class="menu-hero-desc">
+            Handcrafted fresh daily, seasonal ingredients, pure elegance.
+        </p>
+    </section>
+
+    <section id="categories">
+
+        <div class="categories-grid">
+
+        
+            <a href="freshjuices.html" class="categories-card1">
+                <div class="categories-body">
+                    <div class="categories-name">FRESH JUICES</div>
+                    <div class="categories-desc">Squeeze the moment</div>
+                </div>
+            </a>
+
+    
+            <a href="smoothies.html" class="categories-card2">
+                <div class="categories-body">
+                    <div class="categories-name">SMOOTHIES</div>
+                    <div class="categories-desc">THE SMOOTH SIDE</div>
+                </div>
+            </a>
+
+    
+            <a href="milkshakes.html" class="categories-card3">
+                <div class="categories-body">
+                    <div class="categories-name">MILKSHAKES</div>
+                    <div class="categories-desc">MILK MAGIC</div>
+                </div>
+            </a>
+
+    
+            <a href="soda.html" class="categories-card4">
+                <div class="categories-body">
+                    <div class="categories-name">SODA</div>
+                    <div class="categories-desc">JUST FIZZ</div>
+                </div>
+            </a>
+
+    
+            <a href="sundaes.html" class="categories-card5">
+                <div class="categories-body">
+                    <div class="categories-name">SUNDAES</div>
+                    <div class="categories-desc">SWEET SCOOPS</div>
+                </div>
+            </a>
+
+            
+            <a href="cold drinks.html" class="categories-card6">
+                <div class="categories-body">
+                    <div class="categories-name">COLD DRINKS</div>
+                    <div class="categories-desc">STAY COOL</div>
+                </div>
+            </a>
+
+        
+            <a href="hot drinks.html" class="categories-card7">
+                <div class="categories-body">
+                    <div class="categories-name">HOT DRINKS</div>
+                    <div class="categories-desc">WARM YOUR HEART</div>
+                </div>
+            </a>
+
+        
+            <a href="desserts.html" class="categories-card8">
+                <div class="categories-body">
+                    <div class="categories-name">DESSERTS</div>
+                    <div class="categories-desc">SUGAR RUSH</div>
+                </div>
+            </a>
+
+        </div>
+
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('a[href]');
+            links.forEach(link => {
+                link.addEventListener('click', e => {
+                    const href = link.getAttribute('href');
+                    if (href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+                        e.preventDefault();
+                        document.body.classList.add('fade-out');
+                        setTimeout(() => {
+                            window.location.href = href;
+                        }, 400);
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

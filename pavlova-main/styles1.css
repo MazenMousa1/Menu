@@ -1,0 +1,253 @@
+body {
+    background: #0f3028;
+    margin: 0;
+    padding: 0;
+    animation: fadeInPage 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeInPage {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body.fade-out {
+    animation: fadeOutPage 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeOutPage {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+}
+
+#menu-hero {
+    padding-top: 80px;
+    background: #0f3028;
+    text-align: center;
+    padding-bottom: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-hero-eyebrow {
+    display: inline-block;
+    border: 1px solid #c89b3c;
+    color: #c89b3c;
+    padding: 6px 14px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-family: 'Jost', sans-serif;
+}
+
+.menu-hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 62px;
+    font-weight: 400;
+    color: #eaeaea;
+    margin: 0 0 10px;
+    line-height: 1.2;
+}
+
+.menu-hero-title em {
+    display: block;
+    color: #d89b3c;
+    font-style: italic;
+}
+
+.menu-hero-desc {
+    margin: 25px 0;
+    font-size: 15px;
+    color: #cfcfcf;
+    line-height: 1.7;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.categories-card1,
+.categories-card2,
+.categories-card3,
+.categories-card4,
+.categories-card5,
+.categories-card6,
+.categories-card7,
+.categories-card8 {
+    width: 100%;
+    height: 480px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 12px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.categories-card1:hover,
+.categories-card2:hover,
+.categories-card3:hover,
+.categories-card4:hover,
+.categories-card5:hover,
+.categories-card6:hover,
+.categories-card7:hover,
+.categories-card8:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.categories-card1 {
+    background-image: url(images/juice.png);
+}
+
+.categories-card2 {
+    background-image: url(images/smoothie.png);
+}
+
+.categories-card3 {
+    background-image: url(images/milkshake.png);
+}
+
+.categories-card4 {
+    background-image: url(images/soda.png);
+}
+
+.categories-card5 {
+    background-image: url(images/sundae.png);
+}
+
+.categories-card6 {
+    background-image: url(images/cold.png);
+}
+
+.categories-card7 {
+    background-image: url(images/hot.png);
+}
+
+.categories-card8 {
+    background-image: url(images/d.png);
+}
+
+.categories-card1::before,
+.categories-card2::before,
+.categories-card3::before,
+.categories-card4::before,
+.categories-card5::before,
+.categories-card6::before,
+.categories-card7::before,
+.categories-card8::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 48, 40, 0.95) 0%, rgba(15, 48, 40, 0.4) 40%, rgba(15, 48, 40, 0) 100%);
+    z-index: 1;
+    transition: background 0.4s ease;
+}
+
+
+.categories-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 25px 30px;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 2;
+}
+
+.categories-name {
+    color: #f4c27a;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.categories-card1:hover .categories-name,
+.categories-card2:hover .categories-name,
+.categories-card3:hover .categories-name,
+.categories-card4:hover .categories-name,
+.categories-card5:hover .categories-name,
+.categories-card6:hover .categories-name,
+.categories-card7:hover .categories-name,
+.categories-card8:hover .categories-name {
+    transform: scale(1.05);
+}
+
+.categories-desc {
+    color: #e8ddd0;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    margin: 0;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+
+.back-btn {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #d89b3c;
+    text-decoration: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 1px solid rgba(216, 155, 60, 0.3);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    background: rgba(15, 48, 40, 0.6);
+    z-index: 10;
+}
+
+.back-btn:hover {
+    background: #d89b3c;
+    color: #0b2f25;
+    border-color: #d89b3c;
+}
+
+.back-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.back-btn:hover svg {
+    transform: translateX(-4px);
+}
